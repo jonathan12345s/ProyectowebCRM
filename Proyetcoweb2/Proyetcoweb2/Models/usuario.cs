@@ -11,7 +11,7 @@ namespace Proyetcoweb2.Models
 
 
         [Display(Name = "Id")]
-        public int Empid { get; set; }
+        public int Id { get; set; }
 
         [Required(ErrorMessage = "Usuario Requerido.")]
         public string UserName { get; set; }
