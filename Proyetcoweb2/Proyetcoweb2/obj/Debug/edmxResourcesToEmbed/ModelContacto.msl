@@ -1,14 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="DB_Dev_JaipalModelStoreContainer" CdmEntityContainer="DB_Dev_JaipalEntities2">
-    <EntitySetMapping Name="Contactos">
+  <EntityContainerMapping StorageEntityContainer="DB_Dev_JaipalModelStoreContainer" CdmEntityContainer="DB_Dev_JaipalEntities7">
+    <EntitySetMapping Name="Contactoes">
       <EntityTypeMapping TypeName="DB_Dev_JaipalModel.Contacto">
-        <MappingFragment StoreEntitySet="Contactos">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
-          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-          <ScalarProperty Name="Correo" ColumnName="Correo" />
-          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+        <MappingFragment StoreEntitySet="Contacto">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Cliente" ColumnName="Cliente" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
           <ScalarProperty Name="Puesto" ColumnName="Puesto" />
         </MappingFragment>
       </EntityTypeMapping>

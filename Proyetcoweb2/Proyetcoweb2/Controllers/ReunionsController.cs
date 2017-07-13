@@ -12,7 +12,7 @@ namespace Proyetcoweb2.Controllers
 {
     public class ReunionsController : Controller
     {
-        private DB_Dev_JaipalEntities3 db = new DB_Dev_JaipalEntities3();
+        private DB_Dev_JaipalEntities12 db = new DB_Dev_JaipalEntities12();
 
         // GET: Reunions
         public ActionResult Index()
@@ -46,7 +46,7 @@ namespace Proyetcoweb2.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Titulo,Dia_hora,IDUsuario,Virtual,Cliente")] Reunion reunion)
+        public ActionResult Create([Bind(Include = "Id,titulo,diaYhora,usuario,virtualactivo,Cliente")] Reunion reunion)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace Proyetcoweb2.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Titulo,Dia_hora,IDUsuario,Virtual,Cliente")] Reunion reunion)
+        public ActionResult Edit([Bind(Include = "Id,titulo,diaYhora,usuario,virtualactivo,Cliente")] Reunion reunion)
         {
             if (ModelState.IsValid)
             {

@@ -4,7 +4,17 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<fieldset>
+    <legend>User </legend>
 
+    @if (Session["UserName"] != null)
+    {
+        <text>
+            Welcome @Session["UserName"].ToString()
+            user
+        </text>
+    }
+</fieldset>
 <h2>Index</h2>
 
 <p>
@@ -13,16 +23,16 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Titulo)
+            @Html.DisplayNameFor(model => model.titulo)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Dia_hora)
+            @Html.DisplayNameFor(model => model.diaYhora)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.IDUsuario)
+            @Html.DisplayNameFor(model => model.usuario)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Virtual)
+            @Html.DisplayNameFor(model => model.virtualactivo)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Cliente)
@@ -33,16 +43,16 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Titulo)
+            @Html.DisplayFor(modelItem => item.titulo)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Dia_hora)
+            @Html.DisplayFor(modelItem => item.diaYhora)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.IDUsuario)
+            @Html.DisplayFor(modelItem => item.usuario)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Virtual)
+            @Html.DisplayFor(modelItem => item.virtualactivo)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Cliente)

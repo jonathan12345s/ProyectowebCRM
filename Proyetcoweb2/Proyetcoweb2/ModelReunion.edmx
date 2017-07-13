@@ -10,10 +10,10 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Titulo" Type="varchar" MaxLength="50" />
-          <Property Name="Dia_hora" Type="smalldatetime" />
-          <Property Name="IDUsuario" Type="int" />
-          <Property Name="Virtual" Type="char" MaxLength="2" />
+          <Property Name="titulo" Type="varchar" MaxLength="50" />
+          <Property Name="diaYhora" Type="smalldatetime" />
+          <Property Name="usuario" Type="varchar" MaxLength="50" />
+          <Property Name="virtualactivo" Type="varchar" MaxLength="50" />
           <Property Name="Cliente" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="DB_Dev_JaipalModel1StoreContainer">
@@ -29,13 +29,13 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Titulo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Dia_hora" Type="DateTime" Precision="0" />
-          <Property Name="IDUsuario" Type="Int32" />
-          <Property Name="Virtual" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="titulo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="diaYhora" Type="DateTime" Precision="0" />
+          <Property Name="usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="virtualactivo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Cliente" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityContainer Name="DB_Dev_JaipalEntities3" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DB_Dev_JaipalEntities12" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Reunions" EntityType="Self.Reunion" />
         </EntityContainer>
       </Schema>
@@ -43,15 +43,15 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DB_Dev_JaipalModel1StoreContainer" CdmEntityContainer="DB_Dev_JaipalEntities3">
+        <EntityContainerMapping StorageEntityContainer="DB_Dev_JaipalModel1StoreContainer" CdmEntityContainer="DB_Dev_JaipalEntities12">
           <EntitySetMapping Name="Reunions">
             <EntityTypeMapping TypeName="DB_Dev_JaipalModel1.Reunion">
               <MappingFragment StoreEntitySet="Reunion">
                 <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
-                <ScalarProperty Name="Dia_hora" ColumnName="Dia_hora" />
-                <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
-                <ScalarProperty Name="Virtual" ColumnName="Virtual" />
+                <ScalarProperty Name="titulo" ColumnName="titulo" />
+                <ScalarProperty Name="diaYhora" ColumnName="diaYhora" />
+                <ScalarProperty Name="usuario" ColumnName="usuario" />
+                <ScalarProperty Name="virtualactivo" ColumnName="virtualactivo" />
                 <ScalarProperty Name="Cliente" ColumnName="Cliente" />
               </MappingFragment>
             </EntityTypeMapping>

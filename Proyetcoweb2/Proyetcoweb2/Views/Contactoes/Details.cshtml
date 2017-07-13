@@ -4,7 +4,17 @@
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<fieldset>
+    <legend>User </legend>
 
+    @if (Session["UserName"] != null)
+    {
+        <text>
+            Welcome @Session["UserName"].ToString()
+            user
+        </text>
+    }
+</fieldset>
 <h2>Details</h2>
 
 <div>
@@ -12,35 +22,43 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.idCliente)
+            @Html.DisplayNameFor(model => model.Cliente)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.idCliente)
+            @Html.DisplayFor(model => model.Cliente)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Nombre)
+            @Html.DisplayNameFor(model => model.nombre)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Nombre)
+            @Html.DisplayFor(model => model.nombre)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Correo)
+            @Html.DisplayNameFor(model => model.apellidos)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Correo)
+            @Html.DisplayFor(model => model.apellidos)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Telefono)
+            @Html.DisplayNameFor(model => model.correo)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Telefono)
+            @Html.DisplayFor(model => model.correo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefono)
         </dd>
 
         <dt>
@@ -54,6 +72,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.UserId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

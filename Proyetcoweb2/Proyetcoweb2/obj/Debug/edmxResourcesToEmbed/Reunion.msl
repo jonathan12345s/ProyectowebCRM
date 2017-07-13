@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="DB_Dev_JaipalModel1StoreContainer" CdmEntityContainer="DB_Dev_JaipalEntities12">
+  <EntityContainerMapping StorageEntityContainer="DB_Dev_JaipalModel8StoreContainer" CdmEntityContainer="DB_Dev_JaipalEntities8">
     <EntitySetMapping Name="Reunions">
-      <EntityTypeMapping TypeName="DB_Dev_JaipalModel1.Reunion">
+      <EntityTypeMapping TypeName="DB_Dev_JaipalModel8.Reunion">
         <MappingFragment StoreEntitySet="Reunion">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="titulo" ColumnName="titulo" />
           <ScalarProperty Name="diaYhora" ColumnName="diaYhora" />
           <ScalarProperty Name="usuario" ColumnName="usuario" />
-          <ScalarProperty Name="virtualactivo" ColumnName="virtualactivo" />
+          <ScalarProperty Name="virtual" ColumnName="virtual" />
           <ScalarProperty Name="Cliente" ColumnName="Cliente" />
         </MappingFragment>
       </EntityTypeMapping>

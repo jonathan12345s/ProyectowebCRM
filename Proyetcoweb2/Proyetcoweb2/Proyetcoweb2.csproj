@@ -225,6 +225,18 @@
     <Content Include="Views\Clientes\Details.cshtml" />
     <Content Include="Views\Clientes\Edit.cshtml" />
     <Content Include="Views\Clientes\Index.cshtml" />
+    <EntityDeploy Include="Modelticket.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Modelticket.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Modelticket.edmx.diagram">
+      <DependentUpon>Modelticket.edmx</DependentUpon>
+    </Content>
+    <Content Include="Views\tickets\Create.cshtml" />
+    <Content Include="Views\tickets\Delete.cshtml" />
+    <Content Include="Views\tickets\Details.cshtml" />
+    <Content Include="Views\tickets\Edit.cshtml" />
+    <Content Include="Views\tickets\Index.cshtml" />
     <EntityDeploy Include="ModelContacto.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelContacto.Designer.cs</LastGenOutput>
@@ -249,18 +261,6 @@
     <Content Include="Views\Reunions\Details.cshtml" />
     <Content Include="Views\Reunions\Edit.cshtml" />
     <Content Include="Views\Reunions\Index.cshtml" />
-    <EntityDeploy Include="Modelticket.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Modelticket.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Modelticket.edmx.diagram">
-      <DependentUpon>Modelticket.edmx</DependentUpon>
-    </Content>
-    <Content Include="Views\tickets\Create.cshtml" />
-    <Content Include="Views\tickets\Delete.cshtml" />
-    <Content Include="Views\tickets\Details.cshtml" />
-    <Content Include="Views\tickets\Edit.cshtml" />
-    <Content Include="Views\tickets\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

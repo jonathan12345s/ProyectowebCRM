@@ -15,10 +15,10 @@ namespace Proyetcoweb2
     public partial class Reunion
     {
         public int Id { get; set; }
-        public string Titulo { get; set; }
-        public Nullable<System.DateTime> Dia_hora { get; set; }
-        public Nullable<int> IDUsuario { get; set; }
-        public string Virtual { get; set; }
+        public string titulo { get; set; }
+        public Nullable<System.DateTime> diaYhora { get; set; }
+        public string usuario { get; set; }
+        public string virtualactivo { get; set; }
         public string Cliente { get; set; }
     }
 }

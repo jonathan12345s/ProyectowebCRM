@@ -41,6 +41,23 @@ namespace Proyetcoweb2.Models
             return View();
         }
 
+
+
+        public ActionResult datos()
+        {
+
+
+
+            IList<UserProfile> studentList = db.UserProfiles.ToList();
+
+
+
+            ViewData["Usuario"] = studentList;
+
+            return View();
+
+        }
+
         // POST: UserProfiles/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.

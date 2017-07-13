@@ -12,13 +12,24 @@ namespace Proyetcoweb2.Controllers
 {
     public class ContactoesController : Controller
     {
-        private DB_Dev_JaipalEntities2 db = new DB_Dev_JaipalEntities2();
+        private DB_Dev_JaipalEntities7 db = new DB_Dev_JaipalEntities7();
 
         // GET: Contactoes
         public ActionResult Index()
         {
-            return View(db.Contactos.ToList());
+
+
+
+
+            return View(db.Contactoes.ToList());
         }
+
+
+     
+     
+
+
+
 
         // GET: Contactoes/Details/5
         public ActionResult Details(int? id)
@@ -27,7 +38,7 @@ namespace Proyetcoweb2.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Contacto contacto = db.Contactos.Find(id);
+            Contacto contacto = db.Contactoes.Find(id);
             if (contacto == null)
             {
                 return HttpNotFound();
@@ -46,11 +57,11 @@ namespace Proyetcoweb2.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,idCliente,Nombre,Correo,Telefono,Puesto")] Contacto contacto)
+        public ActionResult Create([Bind(Include = "UserId,Cliente,nombre,apellidos,correo,telefono,Puesto")] Contacto contacto)
         {
             if (ModelState.IsValid)
             {
-                db.Contactos.Add(contacto);
+                db.Contactoes.Add(contacto);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -65,7 +76,7 @@ namespace Proyetcoweb2.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Contacto contacto = db.Contactos.Find(id);
+            Contacto contacto = db.Contactoes.Find(id);
             if (contacto == null)
             {
                 return HttpNotFound();
@@ -78,7 +89,7 @@ namespace Proyetcoweb2.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,idCliente,Nombre,Correo,Telefono,Puesto")] Contacto contacto)
+        public ActionResult Edit([Bind(Include = "UserId,Cliente,nombre,apellidos,correo,telefono,Puesto")] Contacto contacto)
         {
             if (ModelState.IsValid)
             {
@@ -96,7 +107,7 @@ namespace Proyetcoweb2.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Contacto contacto = db.Contactos.Find(id);
+            Contacto contacto = db.Contactoes.Find(id);
             if (contacto == null)
             {
                 return HttpNotFound();
@@ -109,8 +120,8 @@ namespace Proyetcoweb2.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Contacto contacto = db.Contactos.Find(id);
-            db.Contactos.Remove(contacto);
+            Contacto contacto = db.Contactoes.Find(id);
+            db.Contactoes.Remove(contacto);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

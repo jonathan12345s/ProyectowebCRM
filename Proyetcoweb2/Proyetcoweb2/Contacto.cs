@@ -14,11 +14,12 @@ namespace Proyetcoweb2
     
     public partial class Contacto
     {
-        public int Id { get; set; }
-        public Nullable<int> idCliente { get; set; }
-        public string Nombre { get; set; }
-        public string Correo { get; set; }
-        public string Telefono { get; set; }
+        public int UserId { get; set; }
+        public string Cliente { get; set; }
+        public string nombre { get; set; }
+        public string apellidos { get; set; }
+        public string correo { get; set; }
+        public string telefono { get; set; }
         public string Puesto { get; set; }
     }
 }

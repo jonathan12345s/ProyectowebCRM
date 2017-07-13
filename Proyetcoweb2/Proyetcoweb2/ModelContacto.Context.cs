@@ -13,10 +13,10 @@ namespace Proyetcoweb2
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DB_Dev_JaipalEntities2 : DbContext
+    public partial class DB_Dev_JaipalEntities7 : DbContext
     {
-        public DB_Dev_JaipalEntities2()
-            : base("name=DB_Dev_JaipalEntities2")
+        public DB_Dev_JaipalEntities7()
+            : base("name=DB_Dev_JaipalEntities7")
         {
         }
     
@@ -25,6 +25,6 @@ namespace Proyetcoweb2
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Contacto> Contactos { get; set; }
+        public virtual DbSet<Contacto> Contactoes { get; set; }
     }
 }
