@@ -1,0 +1,59 @@
+﻿@model Proyetcoweb2.Reunion
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Reunion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dia_hora)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dia_hora)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IDUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IDUsuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Virtual)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Virtual)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

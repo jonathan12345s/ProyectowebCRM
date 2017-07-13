@@ -17,7 +17,7 @@ namespace Proyetcoweb2
                            url: "{controller}/{action}/{id}",
                            defaults: new
                            {
-                               controller = "Contactoes",
+                               controller = "Reunions",
                                action = "Index",
                                id = UrlParameter.Optional
                            }
