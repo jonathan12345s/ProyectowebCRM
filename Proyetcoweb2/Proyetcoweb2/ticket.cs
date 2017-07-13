@@ -18,7 +18,7 @@ namespace Proyetcoweb2
         public string Titulo { get; set; }
         public string detalle { get; set; }
         public string quien_reporto { get; set; }
-        public Nullable<int> Cliente_id { get; set; }
+        public string Cliente_id { get; set; }
         public string Estado_Actual { get; set; }
     }
 }

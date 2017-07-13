@@ -52,8 +52,19 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Estado_Actual, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Estado_Actual, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Estado_Actual, "", new { @class = "text-danger" })
+
+                @Html.DropDownListFor(model => model.Estado_Actual,
+                  new List<SelectListItem> {
+                       new SelectListItem { Value = "Abierto" , Text = "Abierto" },
+                       new SelectListItem { Value = "En Proceso" , Text = "En Proceso" },
+                        new SelectListItem { Value = "En Espera" , Text = "En Espera" },
+                         new SelectListItem { Value = "Finalizar" , Text = "Finalizar" },
+
+                    },
+                  new { @class = "form-control" })
+            
+                
+                    @Html.ValidationMessageFor(model => model.Estado_Actual, "", new { @class = "text-danger" })
             </div>
         </div>
 

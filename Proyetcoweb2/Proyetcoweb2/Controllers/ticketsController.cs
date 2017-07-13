@@ -12,7 +12,7 @@ namespace Proyetcoweb2.Controllers
 {
     public class ticketsController : Controller
     {
-        private DB_Dev_JaipalEntities4 db = new DB_Dev_JaipalEntities4();
+        private DB_Dev_JaipalEntities6 db = new DB_Dev_JaipalEntities6();
 
         // GET: tickets
         public ActionResult Index()

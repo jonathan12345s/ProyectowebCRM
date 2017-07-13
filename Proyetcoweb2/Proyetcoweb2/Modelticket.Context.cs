@@ -13,10 +13,10 @@ namespace Proyetcoweb2
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DB_Dev_JaipalEntities4 : DbContext
+    public partial class DB_Dev_JaipalEntities6 : DbContext
     {
-        public DB_Dev_JaipalEntities4()
-            : base("name=DB_Dev_JaipalEntities4")
+        public DB_Dev_JaipalEntities6()
+            : base("name=DB_Dev_JaipalEntities6")
         {
         }
     

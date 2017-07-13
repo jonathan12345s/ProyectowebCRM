@@ -5,7 +5,7 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="DB_Dev_JaipalModel2.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="tickets">
+        <EntityType Name="ticket">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -13,11 +13,11 @@
           <Property Name="Titulo" Type="varchar" MaxLength="50" />
           <Property Name="detalle" Type="varchar" MaxLength="50" />
           <Property Name="quien_reporto" Type="varchar" MaxLength="50" />
-          <Property Name="Cliente_id" Type="int" />
+          <Property Name="Cliente_id" Type="varchar" MaxLength="50" />
           <Property Name="Estado_Actual" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="DB_Dev_JaipalModel2StoreContainer">
-          <EntitySet Name="tickets" EntityType="Self.tickets" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ticket" EntityType="Self.ticket" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
@@ -32,10 +32,10 @@
           <Property Name="Titulo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="detalle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="quien_reporto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Cliente_id" Type="Int32" />
+          <Property Name="Cliente_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Estado_Actual" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityContainer Name="DB_Dev_JaipalEntities4" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DB_Dev_JaipalEntities6" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tickets" EntityType="Self.ticket" />
         </EntityContainer>
       </Schema>
@@ -43,10 +43,10 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DB_Dev_JaipalModel2StoreContainer" CdmEntityContainer="DB_Dev_JaipalEntities4">
+        <EntityContainerMapping StorageEntityContainer="DB_Dev_JaipalModel2StoreContainer" CdmEntityContainer="DB_Dev_JaipalEntities6">
           <EntitySetMapping Name="tickets">
             <EntityTypeMapping TypeName="DB_Dev_JaipalModel2.ticket">
-              <MappingFragment StoreEntitySet="tickets">
+              <MappingFragment StoreEntitySet="ticket">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Titulo" ColumnName="Titulo" />
                 <ScalarProperty Name="detalle" ColumnName="detalle" />

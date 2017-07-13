@@ -178,15 +178,15 @@
       <DependentUpon>ModelReunion.edmx</DependentUpon>
       <LastGenOutput>ModelReunion.cs</LastGenOutput>
     </Content>
-    <Content Include="ModelTickets.Context.tt">
+    <Content Include="Modelticket.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelTickets.edmx</DependentUpon>
-      <LastGenOutput>ModelTickets.Context.cs</LastGenOutput>
+      <DependentUpon>Modelticket.edmx</DependentUpon>
+      <LastGenOutput>Modelticket.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="ModelTickets.tt">
+    <Content Include="Modelticket.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelTickets.edmx</DependentUpon>
-      <LastGenOutput>ModelTickets.cs</LastGenOutput>
+      <DependentUpon>Modelticket.edmx</DependentUpon>
+      <LastGenOutput>Modelticket.cs</LastGenOutput>
     </Content>
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -249,12 +249,12 @@
     <Content Include="Views\Reunions\Details.cshtml" />
     <Content Include="Views\Reunions\Edit.cshtml" />
     <Content Include="Views\Reunions\Index.cshtml" />
-    <EntityDeploy Include="ModelTickets.edmx">
+    <EntityDeploy Include="Modelticket.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelTickets.Designer.cs</LastGenOutput>
+      <LastGenOutput>Modelticket.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="ModelTickets.edmx.diagram">
-      <DependentUpon>ModelTickets.edmx</DependentUpon>
+    <Content Include="Modelticket.edmx.diagram">
+      <DependentUpon>Modelticket.edmx</DependentUpon>
     </Content>
     <Content Include="Views\tickets\Create.cshtml" />
     <Content Include="Views\tickets\Delete.cshtml" />
@@ -364,20 +364,20 @@
     </Compile>
     <Compile Include="Models\UserProfilesController.cs" />
     <Compile Include="Models\usuario.cs" />
-    <Compile Include="ModelTickets.Context.cs">
+    <Compile Include="Modelticket.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelTickets.Context.tt</DependentUpon>
+      <DependentUpon>Modelticket.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModelTickets.cs">
+    <Compile Include="Modelticket.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelTickets.tt</DependentUpon>
+      <DependentUpon>Modelticket.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModelTickets.Designer.cs">
+    <Compile Include="Modelticket.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelTickets.edmx</DependentUpon>
+      <DependentUpon>Modelticket.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reunion.cs">
@@ -399,7 +399,7 @@
       <DependentUpon>SampleDataModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="ticket.cs">
-      <DependentUpon>ModelTickets.tt</DependentUpon>
+      <DependentUpon>Modelticket.tt</DependentUpon>
     </Compile>
     <Compile Include="UserProfile.cs">
       <DependentUpon>SampleDataModel.tt</DependentUpon>

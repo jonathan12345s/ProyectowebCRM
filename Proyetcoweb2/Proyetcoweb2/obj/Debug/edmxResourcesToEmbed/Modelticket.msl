@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_Dev_JaipalModel2StoreContainer" CdmEntityContainer="DB_Dev_JaipalEntities6">
+    <EntitySetMapping Name="tickets">
+      <EntityTypeMapping TypeName="DB_Dev_JaipalModel2.ticket">
+        <MappingFragment StoreEntitySet="ticket">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="detalle" ColumnName="detalle" />
+          <ScalarProperty Name="quien_reporto" ColumnName="quien_reporto" />
+          <ScalarProperty Name="Cliente_id" ColumnName="Cliente_id" />
+          <ScalarProperty Name="Estado_Actual" ColumnName="Estado_Actual" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
