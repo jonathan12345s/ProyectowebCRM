@@ -158,6 +158,16 @@
       <DependentUpon>ModelCliente.edmx</DependentUpon>
       <LastGenOutput>ModelCliente.cs</LastGenOutput>
     </Content>
+    <Content Include="ModelContacto.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelContacto.edmx</DependentUpon>
+      <LastGenOutput>ModelContacto.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelContacto.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelContacto.edmx</DependentUpon>
+      <LastGenOutput>ModelContacto.cs</LastGenOutput>
+    </Content>
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -195,6 +205,18 @@
     <Content Include="Views\Clientes\Details.cshtml" />
     <Content Include="Views\Clientes\Edit.cshtml" />
     <Content Include="Views\Clientes\Index.cshtml" />
+    <EntityDeploy Include="ModelContacto.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelContacto.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="ModelContacto.edmx.diagram">
+      <DependentUpon>ModelContacto.edmx</DependentUpon>
+    </Content>
+    <Content Include="Views\Contactoes\Create.cshtml" />
+    <Content Include="Views\Contactoes\Delete.cshtml" />
+    <Content Include="Views\Contactoes\Details.cshtml" />
+    <Content Include="Views\Contactoes\Edit.cshtml" />
+    <Content Include="Views\Contactoes\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -240,7 +262,11 @@
     <Compile Include="Cliente.cs">
       <DependentUpon>ModelCliente.tt</DependentUpon>
     </Compile>
+    <Compile Include="Contacto.cs">
+      <DependentUpon>ModelContacto.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\ClientesController.cs" />
+    <Compile Include="Controllers\ContactoesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -259,6 +285,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelCliente.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ModelContacto.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelContacto.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelContacto.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelContacto.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelContacto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelContacto.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\UserProfilesController.cs" />
     <Compile Include="Models\usuario.cs" />
