@@ -148,6 +148,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ModelCliente.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelCliente.edmx</DependentUpon>
+      <LastGenOutput>ModelCliente.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelCliente.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelCliente.edmx</DependentUpon>
+      <LastGenOutput>ModelCliente.cs</LastGenOutput>
+    </Content>
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -173,6 +183,18 @@
     <Content Include="Views\UserProfiles\Details.cshtml" />
     <Content Include="Views\UserProfiles\Edit.cshtml" />
     <Content Include="Views\UserProfiles\Index.cshtml" />
+    <EntityDeploy Include="ModelCliente.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelCliente.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="ModelCliente.edmx.diagram">
+      <DependentUpon>ModelCliente.edmx</DependentUpon>
+    </Content>
+    <Content Include="Views\Clientes\Create.cshtml" />
+    <Content Include="Views\Clientes\Delete.cshtml" />
+    <Content Include="Views\Clientes\Details.cshtml" />
+    <Content Include="Views\Clientes\Edit.cshtml" />
+    <Content Include="Views\Clientes\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -215,9 +237,28 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Cliente.cs">
+      <DependentUpon>ModelCliente.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\ClientesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ModelCliente.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelCliente.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelCliente.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelCliente.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelCliente.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelCliente.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\UserProfilesController.cs" />
     <Compile Include="Models\usuario.cs" />
