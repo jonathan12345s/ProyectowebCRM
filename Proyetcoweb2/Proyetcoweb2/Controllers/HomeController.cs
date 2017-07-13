@@ -13,6 +13,11 @@ namespace Proyetcoweb2.Controllers
             return View();
         }
 
+        public ActionResult Detalles()
+        {
+            return PartialView();
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Login(UserProfile objUser)

@@ -17,8 +17,8 @@ namespace Proyetcoweb2
                            url: "{controller}/{action}/{id}",
                            defaults: new
                            {
-                               controller = "Reunions",
-                               action = "Index",
+                               controller = "Home",
+                               action = "Login",
                                id = UrlParameter.Optional
                            }
                        );
