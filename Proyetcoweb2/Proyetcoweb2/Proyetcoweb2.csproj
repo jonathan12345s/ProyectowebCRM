@@ -168,6 +168,16 @@
       <DependentUpon>ModelContacto.edmx</DependentUpon>
       <LastGenOutput>ModelContacto.cs</LastGenOutput>
     </Content>
+    <Content Include="ModelReunion.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelReunion.edmx</DependentUpon>
+      <LastGenOutput>ModelReunion.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelReunion.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelReunion.edmx</DependentUpon>
+      <LastGenOutput>ModelReunion.cs</LastGenOutput>
+    </Content>
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -217,6 +227,13 @@
     <Content Include="Views\Contactoes\Details.cshtml" />
     <Content Include="Views\Contactoes\Edit.cshtml" />
     <Content Include="Views\Contactoes\Index.cshtml" />
+    <EntityDeploy Include="ModelReunion.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelReunion.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="ModelReunion.edmx.diagram">
+      <DependentUpon>ModelReunion.edmx</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -301,9 +318,27 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelContacto.edmx</DependentUpon>
     </Compile>
+    <Compile Include="ModelReunion.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelReunion.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelReunion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelReunion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelReunion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelReunion.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\UserProfilesController.cs" />
     <Compile Include="Models\usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reunion.cs">
+      <DependentUpon>ModelReunion.tt</DependentUpon>
+    </Compile>
     <Compile Include="SampleDataModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
