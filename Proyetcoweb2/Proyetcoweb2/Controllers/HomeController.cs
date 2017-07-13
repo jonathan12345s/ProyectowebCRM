@@ -26,7 +26,25 @@ namespace Proyetcoweb2.Controllers
                     {
                         Session["UserID"] = obj.UserId.ToString();
                         Session["UserName"] = obj.UserName.ToString();
-                        return RedirectToAction("UserDashBoard");
+
+
+                        var tipo = obj.Tipo.ToString();
+
+
+                        if (tipo == "admin")
+                        {
+
+
+                            return RedirectToAction("UserDashBoard");
+
+
+                        }
+                        else
+                        {
+                            return RedirectToAction("p1");
+                        }
+
+
                     }
                 }
             }
@@ -34,6 +52,19 @@ namespace Proyetcoweb2.Controllers
         }
 
         public ActionResult UserDashBoard()
+        {
+            if (Session["UserID"] != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login");
+            }
+        }
+
+
+        public ActionResult p1()
         {
             if (Session["UserID"] != null)
             {
